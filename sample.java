@@ -12,6 +12,8 @@ public void signin(){
         Scanner sc =new Scanner(System.in);
        
         Sample sa = new Sample();
+        int cont;
+        do{
         System.out.println("main menu");
         System.out.println("\n1.Login \n2.Signin \n3.Exit");
         System.out.println("Enter your choice :");
@@ -29,8 +31,15 @@ public void signin(){
             default:
              System.out.println("enter the correct choice");
         }
+        System.out.println("Enter 0 to quit and 1 to continue");
+        cont =sc.nextInt();
+    }while(cont ==1);
+}
+}
+
+  
 
 
-        }
-    }
+        
+    
     

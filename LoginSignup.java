@@ -1,6 +1,10 @@
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class LoginSignup {
+    public static ArrayList<Data> arrli = new ArrayList<Data>();
+
+    
     public void performLogin(){
 
     }
@@ -16,6 +20,7 @@ public class LoginSignup {
         System.out.println(da.getUsername());
         System.out.println(da.getEmailid());
         System.out.println(da.getPassword());
+        arrli.add(da);
 
         
     }
