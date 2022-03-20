@@ -2,28 +2,25 @@ import java.util.Scanner;
 
 public class Sample {
  
-public void login(){
-   System.out.println();
-}
-public void signin(){
-   System.out.println();
-}
+
+
     public static void main(String[] args) {
         Scanner sc =new Scanner(System.in);
+        LoginSignup ls = new LoginSignup();
        
-        Sample sa = new Sample();
-        int cont;
+        
+        int ch;
         do{
         System.out.println("main menu");
         System.out.println("\n1.Login \n2.Signin \n3.Exit");
         System.out.println("Enter your choice :");
-        int ch=sc.nextInt();
+        ch=sc.nextInt();
         switch (ch){
             case 1:
-                sa.login();
+                ls.performLogin();
                 break;
             case 2:
-                sa.signin();
+                ls.performSignup();
                 break;
             case 3:
                 break;
@@ -31,9 +28,9 @@ public void signin(){
             default:
              System.out.println("enter the correct choice");
         }
-        System.out.println("Enter 0 to quit and 1 to continue");
-        cont =sc.nextInt();
-    }while(cont ==1);
+       
+    }while(ch!=3);
+    ls.printUsers();
 }
 }
 

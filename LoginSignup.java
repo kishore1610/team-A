@@ -13,15 +13,23 @@ public class LoginSignup {
         Scanner sc =new Scanner(System.in);
         System.out.println("enter the username");
         String username =sc.nextLine();
+        da.setUsername(username);
         System.out.println("enter the password");
         String password =sc.nextLine();
+        da.Setpassword(password);
         System.out.println("enter the email");
-        String email =sc.nextLine();
-        System.out.println(da.getUsername());
-        System.out.println(da.getEmailid());
-        System.out.println(da.getPassword());
+        String emailid =sc.nextLine();
+        da.setEmailid(emailid);
+        //System.out.println(da.getUsername());
+       // System.out.println(da.getEmailid());
+       // System.out.println(da.getPassword());
         arrli.add(da);
 
         
+    }
+    public void printUsers(){
+        for (Data data : arrli) {
+            System.out.println(data.getUsername());
+        }
     }
 }
